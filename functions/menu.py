@@ -2,7 +2,7 @@ import os
 from functions import menu_options
 
 
-def menu():
+def menu(callback):
     os.system("cls")
     print("1. Print list of all books.")
     print("2. Download list")
@@ -22,4 +22,4 @@ def menu():
     elif option == 4:
         print("4")
     elif option == 5:
-        print("5")
+        callback()

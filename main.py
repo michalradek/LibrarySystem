@@ -15,7 +15,7 @@ def main():
         option = int(input("Select option: "))
         if option == 1:
             if log_in():
-                menu()
+                menu(main)
             else:
                 print("nie ok")
         elif option == 2:
