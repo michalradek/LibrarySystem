@@ -18,7 +18,7 @@ def menu():
     elif option == 2:
         print("2")
     elif option == 3:
-        print("3")
+        menu_options.add_book(menu)
     elif option == 4:
         print("4")
     elif option == 5:

@@ -32,9 +32,22 @@ class Sql_Database:
 
     def fetch_all(self, que, params=None):
         cursor = self.connection.cursor(buffered=True)
-        cursor.execute(que)
+        if params:
+            cursor.execute(que, params)
+        else:
+            cursor.execute(que)
         res = cursor.fetchall()
         cursor.close()
         return res
 
-
+    def exe(self, query, params=None):
+        cursor = self.connection.cursor(buffered=True)
+        try:
+            if params:
+                cursor.execute(query,params)
+            else:
+                cursor.execute(query)
+        except ValueError:
+            print(ValueError)
+        self.connection.commit()
+        cursor.close()

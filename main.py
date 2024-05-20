@@ -21,7 +21,7 @@ def main():
         elif option == 2:
             exit(1)
     except ValueError:
-        input("Select option propertly. Press any key to continue")
+        input("Select option properly. Press any key to continue")
         main()
 
 
